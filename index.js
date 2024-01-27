@@ -90,4 +90,17 @@ var finances = [
 // console.log("this is a test"); testing and resolving merge conflicts!
 
 // reviewing the array/ syntax to log a variable
-console.log (finances);
+// console.log (finances);
+
+
+// * The total number of months included in the dataset.
+console.log ('The total number of months = '+finances.length)
+
+// * The net total amount of Profit/Losses over the entire period.
+var netTotal = 0;
+for (let index = 0; index < finances.length; index++) {
+  netTotal += finances[i].ProfitLosses;
+  
+}; 
+console.log (netTotal)
+
