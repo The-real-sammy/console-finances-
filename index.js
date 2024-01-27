@@ -87,4 +87,7 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-console.log("this is a test")
+// console.log("this is a test"); testing and resolving merge conflicts!
+
+// reviewing the array/ syntax to log a variable
+console.log (finances);
