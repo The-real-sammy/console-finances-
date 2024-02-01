@@ -110,11 +110,14 @@ var netTotal = 0;
 for (let i = 0; i < profitLoss.length; i++) {
   netTotal += profitLoss[i];
 }; 
-var averageChanges = netTotal / (profitLoss.length-1)
-console.log ("Net Total: £" + averageChanges.toFixed(2));
-
+console.log ("Net Total: £" + netTotal);
 
 // * 3 * The average of the **changes** in Profit/Losses over the entire period.
+var averageChanges = netTotal / (profitLoss.length)
+
+console.log ("Average Change: £" + averageChanges.toFixed(2));
+
+
 
 
 
