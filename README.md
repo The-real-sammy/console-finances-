@@ -1,5 +1,5 @@
 # JS-Console-Finances
-JS console log - Data input and output practice.
+Data input and output practice, using JavaScript to console.log()
 
 ## Description Tutorials: 
 
@@ -33,15 +33,7 @@ For suggestions on what to review first, open the Chrome DevTools by pressing Co
 
 ##### Image 01
 
-
-##### Image 02
-
-
-##### Image 03
-
-
-##### Image 04
-
+<img width="979" alt="Screenshot 2024-02-01 at 07 43 20" src="https://github.com/The-real-sammy/console-finances/assets/152024562/03dd6b55-836f-4da2-b3a3-d8a140b3b861">
 
 ## Credits
 
