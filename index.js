@@ -91,26 +91,31 @@ var finances = [
 // reviewing the array/ syntax to log a variable:
 // console.log (finances);
 
-
-// * The total number of months included in the dataset.
+// * 1 * The total number of months included in the dataset.
 console.log ('The total number of months = '+finances.length)
 
-// * The net total amount of Profit/Losses over the entire period.
-// var netTotal = 0;
-// for (let index = 0; index < finances.length; index++) {
-//   netTotal += finances[i].ProfitLoss;
-  
-// }; 
-// console.log (netTotal)
 
-// * The average of the **changes** in Profit/Losses over the entire period.
-// Calculate profit and loses :
-//*  declaring a variable profitLoss and initialising as an empty array to store the differences between consecutive elements in the finances array./finances i - the value of data before i-1 = //adds the difference to the profitLosss array
 
+// * 2 * The net total amount of Profit/Losses over the entire period.
+// Calculate profit and loses : declaring a variable profitLoss and initialising as an empty array to store the differences between consecutive elements in the finances array. Finances i - the value of data before i-1 = adds the difference to the profitLosss array
 
 var profitLoss = []; 
 for (let i = 1; i <finances.length; i++) {
   var difference= finances[i][1] - finances[i-1][1]; 
   profitLoss.push(difference); 
 };
-console.log(profitLoss);
+// console.log(profitLoss);
+
+var netTotal = 0;
+for (let i = 0; i < profitLoss.length; i++) {
+  netTotal += profitLoss[i];
+}; 
+var averageChanges = netTotal / (profitLoss.length-1)
+console.log ("Net Total: £" + averageChanges.toFixed(2));
+
+
+// * 3 * The average of the **changes** in Profit/Losses over the entire period.
+
+
+
+
