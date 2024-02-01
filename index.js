@@ -1,3 +1,4 @@
+// * The net total amount of Profit/Losses over the entire period. 
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -95,9 +96,17 @@ var finances = [
 console.log ('The total number of months = '+finances.length)
 
 
-
 // * 2 * The net total amount of Profit/Losses over the entire period.
-// Calculate profit and loses : declaring a variable profitLoss and initialising as an empty array to store the differences between consecutive elements in the finances array. Finances i - the value of data before i-1 = adds the difference to the profitLosss array
+
+var totalProfit= 0;
+for (var i = 0; i < finances.length; i++) {
+  totalProfit = finances[i][1];
+}
+console.log ("Net Total: $" + totalProfit);
+
+
+// * 3 * The average of the **changes** in Profit/Losses over the entire period. net total divided by the profit loss array.
+// Calculate profit and loses 
 
 var profitLoss = []; 
 for (let i = 1; i <finances.length; i++) {
@@ -106,19 +115,36 @@ for (let i = 1; i <finances.length; i++) {
 };
 // console.log(profitLoss);
 
-var netTotal = 0;
-for (let i = 0; i < profitLoss.length; i++) {
-  netTotal += profitLoss[i];
-}; 
-console.log ("Net Total: £" + netTotal);
 
-// * 3 * The average of the **changes** in Profit/Losses over the entire period.
-var averageChanges = netTotal / (profitLoss.length)
+var averageChanges = totalProfit / (profitLoss.length)
 
 console.log ("Average Change: £" + averageChanges.toFixed(2));
 
+// * 4 * The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period.
 
 
+var greatestIncrease = {
+  date: "",
+  amount: 0,
+}
+// calulate greatest increase.
+var profitLoss = []; 
+for (let i = 1; i <finances.length; i++) {
+  var difference= finances[i][1] - finances[i-1][1]; 
+  profitLoss.push(difference); 
 
+
+if (difference > greatestIncrease.amount) {
+  greatestIncrease.amount = difference;
+  greatestIncrease.date = finances[i][0]
+}
+};
+
+
+console.log("Greatest increase in profits = " + greatestIncrease.date + " $ " +greatestIncrease.amount
+);
+
+
+// * 5 * The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period.
 
 
