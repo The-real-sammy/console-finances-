@@ -146,5 +146,24 @@ console.log("Greatest increase in profits = " + greatestIncrease.date + " $ " +g
 
 
 // * 5 * The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period.
+var greatestDecrease = {
+  date: "",
+  amount: 0,
+}
+// calulate greatest increase.
+var profitLoss = []; 
+for (let i = 1; i <finances.length; i++) {
+  var difference= finances[i][1] - finances[i-1][1]; 
+  profitLoss.push(difference); 
 
+
+if (difference < greatestDecrease.amount) {
+  greatestDecrease.amount = difference;
+  greatestDecrease.date = finances[i][0]
+}
+};
+
+
+console.log("Greatest decrease in profits = " + greatestDecrease.date + " $" +greatestDecrease.amount
+);
 
