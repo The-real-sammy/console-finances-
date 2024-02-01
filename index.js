@@ -88,8 +88,7 @@ var finances = [
 ];
 
 // console.log("this is a test"); testing and resolving merge conflicts!
-
-// reviewing the array/ syntax to log a variable
+// reviewing the array/ syntax to log a variable:
 // console.log (finances);
 
 
@@ -97,10 +96,21 @@ var finances = [
 console.log ('The total number of months = '+finances.length)
 
 // * The net total amount of Profit/Losses over the entire period.
-var netTotal = 0;
-for (let index = 0; index < finances.length; index++) {
-  netTotal += finances[i].ProfitLosses;
+// var netTotal = 0;
+// for (let index = 0; index < finances.length; index++) {
+//   netTotal += finances[i].ProfitLoss;
   
-}; 
-console.log (netTotal)
+// }; 
+// console.log (netTotal)
 
+// * The average of the **changes** in Profit/Losses over the entire period.
+// Calculate profit and loses :
+//*  declaring a variable profitLoss and initialising as an empty array to store the differences between consecutive elements in the finances array./finances i - the value of data before i-1 = //adds the difference to the profitLosss array
+
+
+var profitLoss = []; 
+for (let i = 1; i <finances.length; i++) {
+  var difference= finances[i][1] - finances[i-1][1]; 
+  profitLoss.push(difference); 
+};
+console.log(profitLoss);
