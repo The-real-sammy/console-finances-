@@ -1,4 +1,4 @@
-# Console-Finances
+# JS-Console-Finances
 JS console log - Data input and output practice.
 
 ## Description Tutorials: 
