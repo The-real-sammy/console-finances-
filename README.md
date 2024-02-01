@@ -28,6 +28,9 @@ For suggestions on what to review first, open the Chrome DevTools by pressing Co
 
 #### Alternatively review the files within the repo: 
 
+[https://github.com/The-real-sammy/js-console-finances] github Repo
+
+
 
 #### Screenshots of deployed page:
 
